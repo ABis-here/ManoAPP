@@ -10,6 +10,8 @@ import androidx.activity.EdgeToEdge;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.graphics.Color;
+
 
 public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
@@ -24,9 +26,15 @@ public class MainActivity extends AppCompatActivity {
 
         btn.setOnClickListener(v -> tv.setText("Nesupratau ar github repository prisidejo, nes error kazkoks buvo"));
 
+        Button btnColor = findViewById(R.id.btnChangeColor);
+        btnColor.setOnClickListener(v ->
+                tv.setTextColor(Color.RED)
+        );
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+
             return insets;
         });
     }

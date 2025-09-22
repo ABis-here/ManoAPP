@@ -30,4 +30,15 @@
         app:layout_constraintTop_toBottomOf="@+id/tvHello"
         tools:ignore="HardcodedText" />
 
+    <Button
+        android:id="@+id/btnChangeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keisti spalvą"
+        app:layout_constraintTop_toBottomOf="@id/btnChangeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        tools:ignore="HardcodedText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
